@@ -30,6 +30,10 @@ header {
 #headerBar1 {
      height: 100%;
      width: 30vw;
+     display: flex;
+     flex-flow: row;
+     justify-content: space-evenly;
+     align-items: center;
 
      border: 1px solid red;
 }
@@ -44,6 +48,32 @@ header {
 #headerBar3 {
      height: 100%;
      width: 30vw;
-     
+     display: flex;
+     flex-flow: row;
+     justify-content: space-evenly;
+     align-items: center;
+
      border: 1px solid red;
+}
+/* ICONS */
+.icon {
+     height: 60%;
+     aspect-ratio: 1 / 1;
+
+     border: 1px solid green;
+}
+/* MAIN SPACE */
+#mainSpace {
+     min-height: 75vh;
+     width: 70vw;
+     margin: auto;
+
+     border: 1px solid blue;
+}
+/* FOOTER */
+footer {
+     height: 10vh;
+     width: 100%;
+
+     background-color: rgb(40, 40, 43)
 }
