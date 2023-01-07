@@ -39,14 +39,15 @@ window.onload=function()
 
         const name = $("#productNameInput").val();
         const url = $("#productImageURLInput").val();
-        const description = $("#productDescriptionInput").val();
         const price = $("#productPriceInput").val();
+        const description = $("#productDescriptionInput").val();
+        
 
         const product = {
             "name": name,
             "imageURL": url,
-            "description": description,
-            "price": price
+            "price": price,
+            "description": description
         };
 
         var result = await createNewProduct(product);
