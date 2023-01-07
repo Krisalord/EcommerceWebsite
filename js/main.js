@@ -34,10 +34,11 @@ window.onload=function()
         document.querySelector('#productList').appendChild(card)
 
         let imageURL = arr[1]
-        let image = document.createElement('img')
-        image.setAttribute('class', 'productImage')
+        const image = document.createElement('img');
+        image.setAttribute('class', 'productCard')
         image.setAttribute('src', imageURL)
-        documet.querySelector('#' + productId).appendChild(image)
+        //'images/account.png'
+        document.querySelector('#productList').appendChild(image)
     }
 
 }
