@@ -17,46 +17,53 @@ window.onload=function()
         window.open('addProduct.html', '_self')
     }
     //add eventlistener to "gpu" button, clear the div in DOM that contais all products, print all GPU's
-    // document.querySelector('#GPU').addEventListener('click', getGpu)
-    // function getGpu()
-    // {
-    //     array of data that is needed for one product
-    //     let arr = ["images/account.png", "Name", "Price", "Description"];
-    // }
+    document.querySelector('#GPU').addEventListener('click', getGpu)
+    //array of data that is needed for one product
+    let arr = ["1", "https://ibb.co/vB83PzT", "Nvidia GTX950", "299€", "This is a Nvidia GPU"];
 
-    $("#productList").ready(async function() {
-        var cards = await getAllProducts();
-    
-        for (const index in cards) {
-            var card = cards[index];
-            $("#productList").append(card);
-        }
-    });
-    //https://ibb.co/vB83PzT
-    //ADD PRODUCT FROM ADDPRODUCT HTML PAGE
-    $("#productForm").submit(async function(form) {
-        form.preventDefault();
+    function getGpu()
+    {
+        let productId = arr[0]
+        // let productImage = arr[1]
+        // let productName = arr[2]
+        // let productPrice = arr[3]
+        // let productDescription = arr[4]
+        const card = document.createElement('div');
+        card.setAttribute('class', 'productCard')
+        card.setAttribute('id', productId)
+        document.querySelector('#productList').appendChild(card)
 
-        const name = $("#productNameInput").val();
-        const url = $("#productImageURLInput").val();
-        const price = $("#productPriceInput").val();
-        const description = $("#productDescriptionInput").val();
-        
+        let imageURL = arr[1]
+        let image = document.createElement('img')
+        image.setAttribute('class', 'productImage')
+        image.setAttribute('src', imageURL)
+        documet.querySelector('#' + productId).appendChild(image)
+    }
 
-        const product = {
-            "name": name,
-            "imageURL": url,
-            "price": price,
-            "description": description
-        };
-
-        var result = await createNewProduct(product);
-
-        if (result) {
-            alert("Product has been added!");
-            window.location.href = "index.html";
-        } else {
-            alert("Failed to add product, sorry");
-        }
-    });
 }
+
+// var product = products[index];
+        
+// var productID = product.id;
+// var productName = product.name;
+// var productImageURL = product.imageURL;
+// var productDescription = product.description;
+// var productPrice = product.price;
+
+// var card = `
+//     <div class="col-sm" id=${productID}>
+//         <div class="card bg-dark" style="width: 18rem;">
+//             <img class="card-img-top" src=${productImageURL} alt="Product Image">
+//             <div class="card-body text-white">
+//                 <h5 class="card-title">${productName}</h5>
+//                 <p class="card-text">${productDescription}</p>
+//                 <br />
+//                 <p><strong>Price: $</strong> ${productPrice}</p>
+//             </div>
+//             <div class="card-footer bg-transparent text-center row">
+//                 <button type="button" class="btn btn-outline-warning btn-sm col" id="buy-btn">Buy Product</button>
+//                 <button type="button" class="btn btn-outline-warning btn-sm col offset-md-1" id="edit-btn">Edit Product</button>
+//             </div>
+//         </div>
+//     </div>
+// `;
