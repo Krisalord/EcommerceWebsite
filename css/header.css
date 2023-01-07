@@ -1,0 +1,70 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clear {
+   clear: both;
+}
+/******************************************
+/* HEADER
+/*******************************************/
+header {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid black;
+}
+/* LEFT BAR */
+#headerBarLeft {
+    height: 100%;
+    width: 30vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    border: 1px solid red;
+}
+#logoImg {
+    height: 60%;
+    margin-left: 20px;
+    aspect-ratio: 1 / 1;
+}
+#storeTitle {
+    margin-left: 20px;
+}
+#storeTitleText {
+    font-size: 2em;
+    font-weight: bold;
+}
+/* RIGHT BAR */
+#headerBarRight {
+    height: 100%;
+    width: 30vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    border: 1px solid red;
+}
+#cart{
+    height: 100px;
+    aspect-ratio: 1 / 1;
+}
+#account{
+    height: 100px;
+    aspect-ratio: 1 / 1;
+}

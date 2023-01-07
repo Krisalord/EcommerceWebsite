@@ -4,27 +4,32 @@
     	<meta charset="utf-8">
     	<meta name="description" content="Your description goes here">
     	<meta name="keywords" content="one, two, three">
-		
+
 		<title>Blank Template</title>
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/footer.css">
+		<link rel="stylesheet" href="css/mainPage.css">
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<!-- JS scripts -->
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/header.js" defer></script>
+		<script type="text/javascript" src="js/footer.js" defer></script>
+		<script type="text/javascript" src="js/mainPage.js" defer></script>
 	</head>
 	<body>
 		<!-- HEADER WITH BUTTON BAR -->
 		<header>
 			<div id="headerBarLeft">
-				<img src="images/LOGO.png" id="logoImg">
+				<input type="image" src="images/LOGO.png" id="logoImg">
 				<div id="storeTitle"><p id="storeTitleText">KLapp<br>Store</p></div>
 			</div>
 			<div id="headerBarRight">
 				<input type="image" src="images/account.png" id="account">
-				<input type="image" src="images/cart.png" id="cashout">
+				<input type="image" src="images/cart.png" id="cart">
 			</div>
 		</header>
 		<!-- MAIN SPACE OF THE PAGE -->
@@ -40,10 +45,10 @@
 				<div class="productCaterogy" id="RAM">
 					<input type="image" src="images/ram.png">
 				</div>
-				<div class="productCaterogy" id="MOTHERBOARD">
+				<div class="productCaterogy" id="MTB">
 					<input type="image" src="images/motherboard.png">
 				</div>
-				<div class="productCaterogy" id="POWERSUPPLY">
+				<div class="productCaterogy" id="PSU">
 					<input type="image" src="images/powersupply.png">
 				</div>
 				<div class="productCaterogy" id="CASE">

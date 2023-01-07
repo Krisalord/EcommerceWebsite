@@ -5,23 +5,45 @@
     	<meta name="description" content="Your description goes here">
     	<meta name="keywords" content="one, two, three">
 
-		<title>Blank Template</title>
+		<title>KLappStore</title>
 
-		<!-- external CSS link -->
+		<!-- CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/footer.css">
 		<link rel="stylesheet" href="css/style.css">
-		<script type="text/javascript" src="js/main.js"></script>
+		<link rel="stylesheet" href="css/account.css">
+		<!-- JavaScript Links -->
+		<script type="text/javascript" src="js/header.js" defer></script>
+		<script type="text/javascript" src="js/account.js" defer></script>
     </head>
 	<body>
         <header>
             <div id="headerBarLeft">
-				<img src="images/LOGO.png" id="logoImg">
+				<input type="image" src="images/LOGO.png" id="logoImg">
 				<div id="storeTitle"><p id="storeTitleText">KLapp<br>Store</p></div>
 			</div>
 			<div id="headerBarRight">
                 <input type="image" src="images/account.png" id="account">
-				<input type="image" src="images/cart.png" id="cashout">
+				<input type="image" src="images/cart.png" id="cart">
 			</div>
         </header>
+		<!-- MAIN SECTION OF THE ACCOUNT PAGE -->
+		<section id="mainContent">
+			<div id="options">
+				<input type="image" src="images/LOGO.png" id="MyData">
+				<ol>
+					<li><input type="button" id="MyData" text="Button"></li>
+					<li><span>Change Password</span></li>
+					<li><span>Privacy</span></li>
+					<li><span>User Agreement</span></li>
+					<li><span>Contacts Us</span></li>
+				</ol>
+			</div>
+			<div id="content">
+			</div>
+		</section>
+		<footer>
+		</footer>
     </body>
 </html>
