@@ -14,7 +14,7 @@ window.onload=function()
     document.querySelector('#account').addEventListener('click', moveToAccount)
     function moveToAccount()
     {
-        window.open('account.html', '_self')
+        window.open('addProduct.html', '_self')
     }
     //add eventlistener to "gpu" button, clear the div in DOM that contais all products, print all GPU's
     // document.querySelector('#GPU').addEventListener('click', getGpu)
