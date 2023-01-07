@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="css/style.css">
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<!-- JS scripts -->
+		<!-- mainJS -->
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/utils.js"></script>
 	</head>
@@ -20,7 +20,7 @@
 		<!-- HEADER WITH BUTTON BAR -->
 		<header>
 			<div id="headerBarLeft">
-				<img src="images/LOGO.png" id="logoImg" href="account.html">
+				<img src="images/LOGO.png" id="logoImg">
 				<div id="storeTitle"><p id="storeTitleText">KLapp<br>Store</p></div>
 			</div>
 			<div id="headerBarRight">
@@ -28,33 +28,26 @@
 				<input type="image" src="images/cart.png" id="cashout">
 			</div>
 		</header>
-		<!-- MAIN SPACE OF THE PAGE -->
-		<section id="mainSpace">
-			<!-- PRODUCT CATEGORIES -->
-			<div id="categories">
-				<div class="productCaterogy" id="GPU">
-					<input type="image" src="images/gpu.png">
+		<section id="addProduct">
+			<form id="productForm">
+				<div>
+					<span>Name</span>
+					<input type="text" class="productData" id="productNameInput" placeholder="Product Name" required>
 				</div>
-				<div class="productCaterogy" id="CPU">
-					<input type="image" src="images/cpu.png">
+				<div>
+					<span>Product Image Url</span>
+					<input type="url" class="productData" id="productImageURLInput" placeholder="Product Image URL" required>
 				</div>
-				<div class="productCaterogy" id="RAM">
-					<input type="image" src="images/ram.png">
+				<div>
+					<span>Product description</span>
+					<input type="text" class="productData" id="productDescriptionInput" placeholder="Product description" required>
 				</div>
-				<div class="productCaterogy" id="MOTHERBOARD">
-					<input type="image" src="images/motherboard.png">
+				<div>
+					<span>Product Price</span>
+					<input type="number" class="productData" id="productPriceInput" placeholder="Product Price" required>
 				</div>
-				<div class="productCaterogy" id="POWERSUPPLY">
-					<input type="image" src="images/powersupply.png">
-				</div>
-				<div class="productCaterogy" id="CASE">
-					<input type="image" src="images/case.png">
-				</div>
-			</div>
-			<!-- PRODUCTS -->
-			<!-- ADD WITH JAVA SCRIPT -->
-			<div id="productList">
-			</div>
+				<button type="submit">Submit</button>
+			</form>
 		</section>
 		<!-- ALWAYS ON FOOTER -->
 		<footer>
