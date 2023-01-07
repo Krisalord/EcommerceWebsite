@@ -1,9 +1,16 @@
-document.querySelector('#GPU').addEventListener('click', addGpu)
+// document.getElementById('#GPU').addEventListener('click', addGpu)
 
-addGpu()
+// addGpu()
+// {
+//     document.querySelector('#productList').innerHTML = ''
+//     let productArray = []
+//     productArray.at(0) = 0
+// }
+
+//add eventlsitener to "account" button, move to "account.html" page when clicked
+document.querySelector('#account').addEventListener('click', moveToAccount, false)
+
+moveToAccount()
 {
-    document.querySelector('#productList').innerHTML = '';
-    let productArray = [];
-    productArray.at(0) = 
+    //window.location.href("account.html")
 }
-
