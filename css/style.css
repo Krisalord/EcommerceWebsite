@@ -96,6 +96,53 @@ header {
 .productCaterogy input:hover{
      transform: scale(1.2);
 }
+/* PRUDUCT LIST */
+#productList{
+     margin-top: 40px;
+     width: 90%;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     align-content: space-around;
+     justify-content: flex-start;
+}
+/* PRODUCT CARD */
+.productCard{
+     height: 300px;
+     width: 150px;
+     margin: 10px 15px;
+     display: flex;
+     flex-direction: column;
+     align-content: flex-start;
+     justify-content: flex-start;
+     
+
+     border: 3px solid black
+}
+.productImage{
+     height: 150px;
+     aspect-ratio: 1 / 1;
+     margin: 0;
+     border: 1px solid green;
+}
+.productName{
+     font-size: 1rem;
+     text-align: center;
+     margin: 0;
+     border: 1px solid purple;
+}
+.productPrice{
+     font-size: 1.4rem;
+     text-align: center;
+     margin: 0;
+     border: 1px solid rebeccapurple;
+}
+.productDescription{
+     font-size: 1.5rem;
+     text-align: center;
+     margin: 0;
+     border: 1px solid rgb(26, 0, 128);
+}
 /* FOOTER */
 footer {
      height: 10vh;
