@@ -12,5 +12,5 @@ function moveToCheckOut()
 document.querySelector('#logoImg').addEventListener('click', mainPage)
 function mainPage()
 {
-    window.open('mainPage.html', '_self')
+    window.open('home.html', '_self')
 }
