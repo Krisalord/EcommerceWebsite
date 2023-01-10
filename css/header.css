@@ -59,11 +59,11 @@ header {
     aspect-ratio: 1 / 1;
     opacity: 70%;
 }
-#storeTitle {
-    
-}
+/* #storeTitle {
+
+} */
 #storeTitleText {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-family: 'Roboto Condensed', sans-serif;
     opacity: 70%;
     color: #b5b5b5;

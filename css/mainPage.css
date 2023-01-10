@@ -134,6 +134,7 @@ body{
      background-color: rgba(0, 0, 0, 0.8);
      display: flex;
      justify-content: center;
+     font-family: 'Roboto Condensed', sans-serif;
 }
 #specs h1{
      font-size: 3rem;
