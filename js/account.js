@@ -61,6 +61,10 @@ function openMyInfo(){
     const contentBox1Span = document.createElement("span")
     contentBox1Span.textContent = "Name"
     contentBox1.appendChild(contentBox1Span)
+    //ADD DIVIDER FOR UNDERLINE
+    const divider1 = document.createElement("div")
+    divider1.classList.add("dividerMyData")
+    contentBox1.appendChild(divider1)
     //ADD SPAN WITH DATA FROM ARRAY
     const contentBox1Span2 = document.createElement("span")
     contentBox1Span2.textContent = "Artur"
@@ -75,6 +79,10 @@ function openMyInfo(){
     const contentBox2Span = document.createElement("span")
     contentBox2Span.textContent = "Email"
     contentBox2.appendChild(contentBox2Span)
+    //ADD DIVIDER FOR UNDERLINE
+    const divider2 = document.createElement("div")
+    divider2.classList.add("dividerMyData")
+    contentBox2.appendChild(divider2)
     //ADD SPAN WITH DATA FROM ARRAY
     const contentBox2Span2 = document.createElement("span")
     contentBox2Span2.textContent = "artur.motin98@gmail.com"
@@ -89,6 +97,10 @@ function openMyInfo(){
     const contentBox3Span = document.createElement("span")
     contentBox3Span.textContent = "Date Of Birth"
     contentBox3.appendChild(contentBox3Span)
+    //ADD DIVIDER FOR UNDERLINE
+    const divider3 = document.createElement("div")
+    divider3.classList.add("dividerMyData")
+    contentBox3.appendChild(divider3)
     //ADD SPAN WITH DATA FROM ARRAY
     const contentBox3Span2 = document.createElement("span")
     contentBox3Span2.textContent = "24.10.1998"
@@ -103,6 +115,10 @@ function openMyInfo(){
     const contentBox4Span = document.createElement("span")
     contentBox4Span.textContent = "Phone"
     contentBox4.appendChild(contentBox4Span)
+    //ADD DIVIDER FOR UNDERLINE
+    const divider4 = document.createElement("div")
+    divider4.classList.add("dividerMyData")
+    contentBox4.appendChild(divider4)
     //ADD SPAN WITH DATA FROM ARRAY
     const contentBox4Span2 = document.createElement("span")
     contentBox4Span2.textContent = "+358449897277"
@@ -120,11 +136,11 @@ function openMyInfo(){
     contentBtn1.value = "Change Info"
     contentBtns.appendChild(contentBtn1)
 
-    const contentBtn2 = document.createElement("input")
-    contentBtn2.type = "button"
-    contentBtn2.classList.add("contentBtn")
-    contentBtn2.value = "Change Password"
-    contentBtns.appendChild(contentBtn2)
+    // const contentBtn2 = document.createElement("input")
+    // contentBtn2.type = "button"
+    // contentBtn2.classList.add("contentBtn")
+    // contentBtn2.value = "Change Password"
+    // contentBtns.appendChild(contentBtn2)
 
     const contentBtn3 = document.createElement("input")
     contentBtn3.type = "button"

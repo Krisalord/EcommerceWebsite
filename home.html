@@ -4,9 +4,7 @@
     	<meta charset="utf-8">
     	<meta name="description" content="Your description goes here">
     	<meta name="keywords" content="one, two, three">
-
 		<title>Blank Template</title>
-
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/reset.css">
@@ -19,48 +17,74 @@
 		<script type="text/javascript" src="js/header.js" defer></script>
 		<script type="text/javascript" src="js/footer.js" defer></script>
 		<script type="text/javascript" src="js/mainPage.js" defer></script>
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Roboto+Condensed&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<!-- HEADER WITH BUTTON BAR -->
 		<header>
-			<div id="headerBarLeft">
-				<input type="image" src="images/LOGO.png" id="logoImg">
-				<div id="headerDivider"></div>
-				<div id="storeTitle"><p id="storeTitleText">KLapp<br>Store</p></div>
+			<div id="mainHeader">
+				<div id="headerBarLeft">
+					<input type="image" src="images/LOGO.png" id="logoImg">
+					<div id="headerDivider"></div>
+					<div id="storeTitle"><p id="storeTitleText">KLapp<br>Store</p></div>
+				</div>
+				<div id="headerBarRight">
+					<input type="image" src="images/account.png" id="account">
+					<div id="headerDivider"></div>
+					<input type="image" src="images/cart.png" id="cart">
+				</div>
 			</div>
-			<div id="headerBarRight">
-				<input type="image" src="images/account.png" id="account">
-				<div id="headerDivider"></div>
-				<input type="image" src="images/cart.png" id="cart">
-			</div>
+			<div id="headerBorderBottom"></div>
 		</header>
 		<!-- MAIN SPACE OF THE PAGE -->
 		<section id="mainSpace">
-			<!-- PRODUCT CATEGORIES -->
-			<!-- <div id="categories">
-				<div class="productCaterogy" id="GPU">
-					<input type="image" src="images/gpu.png">
+			<div id="textSpace">
+				<div id="upperText">
+					<span id="flippedText">This is quote</span>
+					<span id="imageCounter">1/3</span>
 				</div>
-				<div class="productCaterogy" id="CPU">
-					<input type="image" src="images/cpu.png">
+				<div id="bottomText">
+					<span id="titleOfProduct">This is title</span>
+					<div id="dividerProduct"></div>
+					<span id="productText">This is text</span>
 				</div>
-				<div class="productCaterogy" id="RAM">
-					<input type="image" src="images/ram.png">
-				</div>
-				<div class="productCaterogy" id="MTB">
-					<input type="image" src="images/motherboard.png">
-				</div>
-				<div class="productCaterogy" id="PSU">
-					<input type="image" src="images/powersupply.png">
-				</div>
-				<div class="productCaterogy" id="CASE">
-					<input type="image" src="images/case.png">
-				</div>
-			</div> -->
-			<!-- PRODUCTS -->
-			<!-- ADD WITH JAVA SCRIPT -->
-			<div id="productList">
 			</div>
+			<div id="pictureSpace">
+				<div id="gpuBackground">
+					<div id="arrowLeft"></div>
+					<div id="arrowRight"></div>
+				</div>
+			</div>
+		</section>
+		<!-- SPECS OF THE PRODUCT -->
+		<section id="specs">
+			<div id="specsCentered">
+				<h1>Technical Specs</h1>
+				<div id="lists">
+					<div id="list1" class="specLists">
+						<ol>
+							<li>- Text</li>
+							<li>- Text</li>
+							<li>- Text</li>
+						</ol>
+					</div>
+					<div id="list2" class="specLists">
+						<ol>
+							<li>- Text</li>
+							<li>- Text</li>
+							<li>- Text</li>
+						</ol>
+					</div>
+				</div>	
+				<div id="imageSpecs"></div>
+			</div>
+		</section>
+		<!-- MORE PRODUCTS -->
+		<section id="moreProducts">
+
 		</section>
 		<!-- ALWAYS ON FOOTER -->
 		<footer>

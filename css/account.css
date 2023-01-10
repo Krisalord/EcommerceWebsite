@@ -16,6 +16,9 @@
    clear: both;
 }
 /* MAIN CONTENT */
+body{
+    font-size: 62.5%;
+}
 #mainContent{
     display: flex;
     flex-direction: row;
@@ -31,8 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    border: 1px solid red;
+    border-right: 1px solid black;
 }
 #options ol{
     margin: 0;
@@ -53,8 +55,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    border: 1px solid red;
 }
 /* MyInfo CSS */
 #contentDivs{
@@ -65,8 +65,6 @@
     font-size: 1.2rem;
     height: 50%;
     width: 80%;
-
-    border: 3px solid green;
 }
 #contentDivsSizing{
     height: 90%;
@@ -76,8 +74,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-
-    border: 2px solid black;
 }
 .contentBox{
     height: 100px;
@@ -87,21 +83,40 @@
     flex-direction: column;
     justify-content: center;
     align-content: flex-start;
-    border: 1px solid red;
+}
+.contentBox span{
+    font-size: 1.5rem;
+    opacity: 70%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.contentBox>:first-child{
+    opacity: 100%;
+}
+.dividerMyData{
+    width: 60%;
+    border-bottom: 1px solid black;
+    margin: 10px 0;
 }
 #contentBtns{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     height: 10%;
     width: 80%;
-
-    border: 1px solid blue;
 }
 .contentBtn{
-    height: 50px;
-    width: 100px;
-    margin-left: 15px;
+    height: 35px;
+    width: 150px;
+    margin-right: 15px;
+    background-color: #b5b5b5;
+    opacity: 100%;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
 }
 /* Contact Us CSS */
 #contactUsDiv{
@@ -112,8 +127,6 @@
     font-size: 1.2rem;
     height: 50%;
     width: 80%;
-
-    border: 3px solid green;
 }
 #emailForm{
     height: 100%;

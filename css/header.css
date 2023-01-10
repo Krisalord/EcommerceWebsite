@@ -19,26 +19,30 @@
 /* HEADER
 /*******************************************/
 header {
-    height: 15vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-
-    border-bottom: 1px solid black;
-}
-/* LEFT BAR */
-header {
-    height: 10vh;
-    max-height: 100px;
+    height: 12vh;
+    max-height: 50px;
     min-height: 50px;
-    width: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#mainHeader{
+    height: 80%;
+    width: 80%;
     max-width: 1920px;
     min-width: 500px;
     display: flex;
     justify-content: space-between;
-    background-color: white;
-
     margin: auto;
+}
+#headerBorderBottom{
+    width: 75%;
+    max-width: 1920px;
+    min-width: 500px;
+    border-bottom: 2px solid #b5b5b5;
+    margin-bottom: 2px;
 }
 /* LEFT BAR */
 #headerBarLeft {
@@ -59,9 +63,10 @@ header {
     
 }
 #storeTitleText {
-    font-size: 1.2rem !important;
-    font-family: 'Roboto Condensed', sans-serif !important;
+    font-size: 1.2rem;
+    font-family: 'Roboto Condensed', sans-serif;
     opacity: 70%;
+    color: #b5b5b5;
 }
 
 /* RIGHT BAR */
@@ -86,7 +91,7 @@ header {
 }
 #headerDivider{
     height: 30px;
-    border-left: 2px solid rgb(56, 56, 56);
+    border-left: 2px solid #b5b5b5;
     margin: 0 20px;
     opacity: 70%;
 }
