@@ -27,6 +27,20 @@ header {
     border-bottom: 1px solid black;
 }
 /* LEFT BAR */
+header {
+    height: 10vh;
+    max-height: 100px;
+    min-height: 50px;
+    width: 100%;
+    max-width: 1920px;
+    min-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+
+    margin: auto;
+}
+/* LEFT BAR */
 #headerBarLeft {
     height: 100%;
     width: 30vw;
@@ -34,21 +48,22 @@ header {
     flex-flow: row;
     justify-content: flex-start;
     align-items: center;
-
-    border: 1px solid red;
 }
 #logoImg {
-    height: 60%;
-    margin-left: 20px;
+    height: 30px;
+    margin-left: 8%;
     aspect-ratio: 1 / 1;
+    opacity: 70%;
 }
 #storeTitle {
-    margin-left: 20px;
+    
 }
 #storeTitleText {
-    font-size: 2em;
-    font-weight: bold;
+    font-size: 1.2rem !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
+    opacity: 70%;
 }
+
 /* RIGHT BAR */
 #headerBarRight {
     height: 100%;
@@ -57,14 +72,21 @@ header {
     flex-flow: row;
     justify-content: flex-end;
     align-items: center;
-
-    border: 1px solid red;
 }
 #cart{
-    height: 100px;
+    height: 30px;
     aspect-ratio: 1 / 1;
+    margin-right: 8%;
+    opacity: 70%;
 }
 #account{
-    height: 100px;
+    height: 30px;
     aspect-ratio: 1 / 1;
+    opacity: 70%;
+}
+#headerDivider{
+    height: 30px;
+    border-left: 2px solid rgb(56, 56, 56);
+    margin: 0 20px;
+    opacity: 70%;
 }

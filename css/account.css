@@ -43,27 +43,101 @@
     margin: 15px 0;
     font-size: 2rem;
 }
-#options ol li span:hover{
-    cursor: pointer;
+#options ol li span{
+    display: block;
 }
 /* DIV WITH CONTENT */
 #content{
     width: 70%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     border: 1px solid red;
 }
-/* MY DATA */
-.myDataDiv{
+/* MyInfo CSS */
+#contentDivs{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    font-size: 1.2rem;
+    height: 50%;
+    width: 80%;
+
+    border: 3px solid green;
+}
+#contentDivsSizing{
+    height: 90%;
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    border: 2px solid black;
+}
+.contentBox{
+    height: 100px;
+    width: 250px;
+    flex: 1 0 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: baseline;
+    align-content: flex-start;
+    border: 1px solid red;
+}
+#contentBtns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10%;
+    width: 80%;
+
+    border: 1px solid blue;
+}
+.contentBtn{
+    height: 50px;
+    width: 100px;
+    margin-left: 15px;
+}
+/* Contact Us CSS */
+#contactUsDiv{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-end;
     font-size: 1.2rem;
+    height: 50%;
+    width: 80%;
+
+    border: 3px solid green;
+}
+#emailForm{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     gap: 10px;
 }
-.myDataFirstName{
-    
+#messageTextBox{
+    resize: none;
+    height: 100px;
+    width: 250px;
+}
+#sendEmailBtn{
+    height: 30px;
+    width: 80px;
+}
+/* Change password */
+#changePassword{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
