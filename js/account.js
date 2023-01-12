@@ -158,46 +158,49 @@ function openContactUs(){
     const contactUsDiv = document.createElement('div')
     contactUsDiv.id = 'contactUsDiv'
 
-    const emailForm = document.createElement('form')
-    emailForm.id = 'emailForm'
-
-    const nameSpan = document.createElement('span')
-    nameSpan.textContent = 'Name: *'
-
-    const nameInput = document.createElement('input')
-    nameInput.type = 'text'
-    nameInput.name = 'name'
-    nameInput.required = true
-
-    const emailSpan = document.createElement('span')
-    emailSpan.textContent = 'Email Address: *'
-
-    const emailInput = document.createElement('input')
-    emailInput.type = 'email'
-    emailInput.name = 'email'
-    emailInput.required = true
-
-    const messageSpan = document.createElement('span')
-    messageSpan.textContent = 'Message: *'
-
-    const messageTextBox = document.createElement('textarea')
-    messageTextBox.id = 'messageTextBox'
-    messageTextBox.name = 'message'
-    messageTextBox.required = true
-
-    const submitButton = document.createElement('input')
-    submitButton.type = 'button'
-    submitButton.name = 'submit'
-    submitButton.value = 'Send'
-    submitButton.id = 'sendEmailBtn'
-
-    emailForm.appendChild(nameSpan)
-    emailForm.appendChild(nameInput)
-    emailForm.appendChild(emailSpan)
-    emailForm.appendChild(emailInput)
-    emailForm.appendChild(messageSpan)
-    emailForm.appendChild(messageTextBox)
-    emailForm.appendChild(submitButton)
+    const emailForm = document.createElement("form")
+    //Name field
+    const nameMailDiv = document.createElement("div")
+    nameMailDiv.classList.add("nameMail")
+    const nameLabel = document.createElement("label")
+    nameLabel.setAttribute("for", "name")
+    nameLabel.innerText = "Name:"
+    const nameInput = document.createElement("input")
+    nameInput.setAttribute("type", "text")
+    nameInput.setAttribute("id", "name")
+    nameInput.setAttribute("name", "name")
+    nameInput.setAttribute("required", "")
+    nameMailDiv.appendChild(nameLabel)
+    nameMailDiv.appendChild(nameInput)
+    emailForm.appendChild(nameMailDiv)
+    //Mail field
+    const nameMailDiv2 = document.createElement("div")
+    nameMailDiv2.classList.add("nameMail")
+    const mailLabel = document.createElement("label")
+    mailLabel.setAttribute("for", "mail")
+    mailLabel.innerText = "Mail:"
+    const mailInput = document.createElement("input")
+    mailInput.setAttribute("type", "text")
+    mailInput.setAttribute("id", "mail")
+    mailInput.setAttribute("name", "mail")
+    mailInput.setAttribute("required", "")
+    nameMailDiv2.appendChild(mailLabel)
+    nameMailDiv2.appendChild(mailInput)
+    emailForm.appendChild(nameMailDiv2)
+    //Message field
+    const contactUsElement = document.createElement("div")
+    contactUsElement.classList.add("contactUsElement")
+    const messageLabel = document.createElement("label")
+    messageLabel.setAttribute("for", "message")
+    messageLabel.innerText = "Message:"
+    const messageInput = document.createElement("textarea")
+    messageInput.setAttribute("id", "message");
+    messageInput.setAttribute("name", "message");
+    messageInput.setAttribute("maxlength", "144");
+    messageInput.setAttribute("required", "");
+    contactUsElement.appendChild(messageLabel)
+    contactUsElement.appendChild(messageInput)
+    emailForm.appendChild(contactUsElement)
 
     contactUsDiv.appendChild(emailForm)
 
