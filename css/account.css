@@ -126,7 +126,7 @@ body{
     flex-wrap: wrap;
     align-content: center;
     font-size: 1.2rem;
-    height: 70%;
+    height: 80%;
     width: 80%;
 }
 form{
@@ -141,7 +141,6 @@ form{
     width: 45%;
     display: flex;
     flex-flow: column;
-    gap: 10px;
 }
 label{
     font-size: 1.5rem;
@@ -150,9 +149,9 @@ label{
     width: 100%;
     display: flex;
     flex-flow: column;
-    gap: 10px;
+    margin-top: 15px;
 }
-form input, textarea{
+form input[type="text"], textarea{
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
@@ -161,7 +160,7 @@ form input, textarea{
     opacity: 70%;
     resize: none;
 }
-input[type="submit"]{
+form input[type="submit"]{
     margin: 15px 15px 15px 0;
     background: none;
     color: rgba(51, 51, 51, 0.7);

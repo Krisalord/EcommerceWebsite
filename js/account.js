@@ -189,7 +189,7 @@ function openContactUs(){
     emailForm.appendChild(nameMailDiv2)
     //Message field
     const contactUsElement = document.createElement("div")
-    contactUsElement.classList.add("contactUsElement")
+    contactUsElement.classList.add("contactUs-element")
     const messageLabel = document.createElement("label")
     messageLabel.setAttribute("for", "message")
     messageLabel.innerText = "Message:"
@@ -201,6 +201,11 @@ function openContactUs(){
     contactUsElement.appendChild(messageLabel)
     contactUsElement.appendChild(messageInput)
     emailForm.appendChild(contactUsElement)
+    //Submit button
+    const contactUsBtn = document.createElement("input")
+    contactUsBtn.setAttribute("type", "submit")
+    contactUsBtn.setAttribute("value", "Submit")
+    emailForm.appendChild(contactUsBtn)
 
     contactUsDiv.appendChild(emailForm)
 
