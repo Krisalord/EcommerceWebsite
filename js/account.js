@@ -239,7 +239,7 @@ function openPasswordChange(){
     confirmPasswordInput.type = 'password'
 
     const changeButton = document.createElement('input')
-    changeButton.type = 'button'
+    changeButton.type = 'submit'
     changeButton.value = 'Change'
 
     changePassword.appendChild(oldPasswordSpan)
