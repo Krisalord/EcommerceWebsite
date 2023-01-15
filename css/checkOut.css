@@ -46,6 +46,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     border: 2px solid rgba(128, 128, 128, 0.7);
 }
 #checkOutSummary span{
@@ -62,6 +63,8 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+    margin-top: 5px;
 }
 /* BUTTONS TO ORDER */
 #checkOutSummary input[type="submit"]{
