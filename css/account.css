@@ -28,6 +28,7 @@ body{
     margin: auto;
     min-height: 75vh;
     width: 70vw;
+    min-height: calc(100vh - 50px);
 }
 /* DIV WITH OPTIONS */
 #options{

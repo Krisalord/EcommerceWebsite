@@ -15,3 +15,31 @@
 .clear {
    clear: both;
 }
+/* CHECKOUT MAIN */
+#checkOutMain{
+    min-height: calc(100vh - 50px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#checkOutContent{
+    height: 80vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+
+    border: 1px solid red;
+}
+#checkOutItems{
+    width: 70%;
+    min-height: 100%;
+
+    border: 1px solid blue;
+}
+#checkOutSummary{
+    height: 400px;
+    width: 30%;
+
+    border: 1px solid green;
+}
