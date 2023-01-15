@@ -19,27 +19,64 @@
 #checkOutMain{
     min-height: calc(100vh - 50px);
     width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 62.5%;
 }
+/* Centered div */
 #checkOutContent{
     height: 80vh;
     width: 60vw;
     display: flex;
     flex-direction: row;
-
-    border: 1px solid red;
 }
+/* Items in the cart */
 #checkOutItems{
     width: 70%;
     min-height: 100%;
-
-    border: 1px solid blue;
+    min-width: 400px;
 }
+/* SUMMARY OF THE ORDER (PRICE, BTNS TO ORDER) */
 #checkOutSummary{
     height: 400px;
+    min-width: 250px;
     width: 30%;
-
-    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgba(128, 128, 128, 0.7);
+}
+#checkOutSummary span{
+    font-size: 1.5rem;
+}
+#checkOutSummary h2 + span{
+    font-size: 2rem;
+}
+#checkOutSummary h2{
+    font-size: 2rem;
+}
+/* Divs that have 2 spans (name and price) */
+.withPrice{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+/* BUTTONS TO ORDER */
+#checkOutSummary input[type="submit"]{
+    margin: 5px 5px 5px 0;
+    background: none;
+    color: rgba(51, 51, 51, 0.7);
+    padding: 10px 20px;
+    border: 2px solid rgba(51, 51, 51, 0.7);;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width: 90%;
+}
+#checkOutSummary input[type="submit"]:hover{
+    background: rgba(51, 51, 51, 0.7);;
+    color: #fff;
 }
