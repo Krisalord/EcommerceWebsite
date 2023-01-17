@@ -20,11 +20,21 @@ body{
      display: flex;
      flex-direction: column;
      align-items: center;
+     min-width: 800px;
+     /* display: flex;
+     overflow-x: scroll;
+     scroll-snap-type: x mandatory;
+     width: 100%; */
 }
+/* BOX OF THE MAIN PRODUCT */
 #mainSpace {
-     height: 70vh;
-     min-height: 75vh;
+     max-height: 700px;
+     min-height: 350px;
+     height: 75vh;
+     padding: 2vh 0;
      width: 70vw;
+     min-width: 600px;
+     max-width: 900px;
      display: flex;
      flex-direction: row;
      align-content: flex-start;
@@ -33,6 +43,26 @@ body{
      font-family: 'Roboto Condensed', sans-serif;
      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+/* BOX FOR SPECS */
+#specs{
+     height: 80vh;
+     min-height: 600px;
+     max-height: 800px;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.8);
+     display: flex;
+     justify-content: center;
+     font-family: 'Roboto Condensed', sans-serif;
+}
+/* OTHER PRODUCTS BOX */
+#moreProducts{
+     width: 70vw;
+     min-width: 600px;
+     max-width: 900px;
+     height: 1100px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     font-family: 'Roboto Condensed', sans-serif;
+}
 /* MAIN SPACE BANNER */
 /* SPACE FOR TEXT OF THE BANNER */
 #textSpace{
@@ -40,8 +70,8 @@ body{
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     height: 70vh;
-     width: 20vw;
+     height: 100%;
+     width: 30%;
 }
 #upperText{
      height: 35%;
@@ -65,7 +95,6 @@ body{
      width: 75%;
      display: flex;
      flex-direction: column;
-     flex-wrap: wrap;
      justify-content: flex-end;
      align-content: flex-start;
 }
@@ -84,8 +113,9 @@ body{
 }
 /* IMAGE SIDE (RIGHT SIDE) */
 #pictureSpace{
-     height: 70vh;
-     width: 40vw;
+     height: 100%;
+     width: 70%;
+     min-width: 350px;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -95,8 +125,8 @@ body{
      background-size: contain;
      background-repeat: no-repeat;
      background-position: center;
-     height: 400px;
-     width: 1200px;
+     width: 100%;
+     height: 100%;
      display: flex;
      flex-direction: row;
      justify-content: flex-end;
@@ -130,24 +160,19 @@ body{
      transform: scale(1.1);
 }
 /* SPECS PAGE */
-#specs{
-     height: 80vh;
-     width: 100%;
-     background-color: rgba(0, 0, 0, 0.8);
-     display: flex;
-     justify-content: center;
-     font-family: 'Roboto Condensed', sans-serif;
-}
 #specs h1{
      font-size: 3rem;
      color: white;
      opacity: 70%;
      text-align: center;
-     margin: 10vh 0;
+     margin: 10% 0;
 }
 #specsCentered{
-     width: 70vw;
      height: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
 }
 #lists{
      display: flex;
@@ -168,33 +193,32 @@ body{
 }
 #imageSpecs{
      height: 250px;
-     margin-top: 5vh;
+     width: 250px;
+     margin-top: 5%;
      background-image: url("./cssImages/gpuSpecs.png");
      background-size: contain;
      background-repeat: no-repeat;
      background-position: center;
 }
-/* OTHER PRODUCTS */
-#moreProducts{
-     height: 130vh;
-     width: 70vw;
-     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-     font-family: 'Roboto Condensed', sans-serif;
-}
+/* MORE PRODUCTS */
 #moreProducts h1{
-     margin: 10vh 0;
+     padding: 50px;
      font-size: 3rem;
      text-align: center;
      opacity: 70%;
 }
+/* List of the GPUs */
 #productList{
-     height: 80%;
+     height: 850px;
      display: flex;
      flex-direction: column;
      align-items: center;
 }
+/* Box with a single gpu */
 .productBox{
-     height: 25%;
+     margin: 25px 25px 0 25px;
+     padding-top: 25px;
+     height: 200px;
      width: 80%;
      display: flex;
      flex-direction: row;
@@ -203,23 +227,23 @@ body{
      border-top: 1px solid rgba(0, 0, 0, 0.7);
 }
 .imageInList1{
-     height: 80%;
-     width: 40%;
+     height: 100%;
+     aspect-ratio: 1 / 1;
      background-image: url("./cssImages/gpuSpecs.png");
      background-size: contain;
      background-repeat: no-repeat;
      background-position: center;
 }
 .imageInList2{
-     height: 80%;
-     width: 40%;
+     height: 100%;
+     aspect-ratio: 1 / 1;
      background-image: url("./cssImages/gpuSpecs2.png");
      background-size: contain;
      background-repeat: no-repeat;
      background-position: center;
 }
 .imageInList3{
-     height: 80%;
+     height: 100%;
      width: 40%;
      background-image: url("./cssImages/gpuSpecs3.png");
      background-size: contain;
@@ -227,35 +251,33 @@ body{
      background-position: center;
 }
 .imageInList4{
-     height: 80%;
+     height: 100%;
      width: 40%;
      background-image: url("./cssImages/gpuSpecs4.png");
      background-size: contain;
      background-repeat: no-repeat;
      background-position: center;
 }
+/* Box with text fields of the single item */
 .textBoxInList{
-     height: 80%;
-     width: 40%;
+     height: 100%;
+     width: 100%;
      opacity: 70%;
-}
-.titlesInList{
      display: flex;
      flex-direction: column;
-     height: 50%;
-     width: 100%;
+     gap: 10px;
 }
-.titlesInList h2{
+.textBoxInList h2{
      font-size: 2rem;
-     margin-bottom: 20px;
 }
-.titlesInList p{
+.textBoxInList p{
      font-size: 1.2rem;
+     width: 70%;
 }
 .addProductInList{
      display: flex;
      flex-direction: row;
-     justify-content: flex-end;
+     justify-content: space-between;
      flex-wrap: wrap;
      align-content: flex-end;
      height: 50%;
@@ -263,19 +285,27 @@ body{
 }
 .addProductInList span{
      font-size: 2rem;
-     margin: 15px 15px;
 }
-.addProductInList input{
+.addProductInList input[type="submit"]{
+     text-align: center;
      height: 35px;
      width: 150px;
-     margin-right: 15px;
-     background-color: #b5b5b5;
-     opacity: 100%;
-     border: none;
-     color: black;
-     text-align: center;
-     text-decoration: none;
-     display: inline-block;
-     font-size: 1rem;
-     margin: 15px 15px;
+     font-size: 1.2rem;
+     background: none;
+     color: rgba(51, 51, 51, 0.7);
+     border: 2px solid rgba(51, 51, 51, 0.7);
+     border-radius: 5px;
+     font-weight: bold;
+     cursor: pointer;
+     transition: all 0.2s ease-in-out;
+     padding: 0;
+}
+.addProductInList input[type="submit"]:hover{
+     background: rgba(51, 51, 51, 0.7);;
+     color: #fff;
+}
+@media screen and (min-resolution: 140px) {
+     * {
+       font-size: 125%;
+     }
 }
