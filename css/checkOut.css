@@ -31,12 +31,8 @@
     width: 60vw;
     display: flex;
     flex-direction: row;
-}
-/* Items in the cart */
-#checkOutItems{
-    width: 70%;
-    min-height: 100%;
-    min-width: 400px;
+    justify-content: center;
+    gap: 75px;
 }
 /* SUMMARY OF THE ORDER (PRICE, BTNS TO ORDER) */
 #checkOutSummary{
@@ -47,7 +43,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    border: 2px solid rgba(128, 128, 128, 0.7);
+    gap: 10px;
+    padding: 10px;
+    /* border: 2px solid rgba(128, 128, 128, 0.7); */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #checkOutSummary span{
     font-size: 1.5rem;
@@ -68,11 +67,10 @@
 }
 /* BUTTONS TO ORDER */
 #checkOutSummary input[type="submit"]{
-    margin: 5px 5px 5px 0;
     background: none;
     color: rgba(51, 51, 51, 0.7);
     padding: 10px 20px;
-    border: 2px solid rgba(51, 51, 51, 0.7);;
+    border: 2px solid rgba(51, 51, 51, 0.7);
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
@@ -82,4 +80,56 @@
 #checkOutSummary input[type="submit"]:hover{
     background: rgba(51, 51, 51, 0.7);;
     color: #fff;
+}
+#summaryButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+/* ITEMS IN CART */
+#checkOutItems{
+    width: 70%;
+    min-height: 100%;
+    /* display: flex;
+    flex-direction: column; */
+}
+.checkOutItem{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 0 0 20px 0;
+}
+/* Picture of the item */
+.checkOutItem input[type="image"]:first-child{
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    padding: 40px;
+}
+/* Box with item description, name and price */
+.checkOutItemText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+}
+.checkOutItem span{
+    font-size: 1.2rem;
+}
+.checkOutItem h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.checkOutItem span:last-child{
+    text-align: right;
+}
+.checkOutItem input[type="image"]:last-child{
+    height: 15px;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    margin: 40px;
 }

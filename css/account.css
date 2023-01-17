@@ -35,8 +35,8 @@ body{
     width: 30%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-right: 1px solid black;
+    margin-top: 30vh;
+    height: 20vh;
 }
 #options ol{
     margin: 0;
@@ -49,27 +49,33 @@ body{
 }
 #options ol li span{
     display: block;
+    opacity: 70%;
+}
+/* DIVIDER FOR ACCOUNT PAGE */
+#dividerForAccount{
+    min-height: 100vh;
+    border-left: 2px solid rgba(0, 0, 0, 0.7);
 }
 /* DIV WITH CONTENT */
 #content{
     width: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: 25vh;
 }
 /* MyInfo CSS */
+/* Main container */
 #contentDivs{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     align-content: flex-end;
     font-size: 1.2rem;
-    height: 50%;
     width: 80%;
 }
 #contentDivsSizing{
-    height: 90%;
+    height: 100%;
     max-width: 90%;
     display: flex;
     flex-direction: row;
@@ -77,9 +83,11 @@ body{
     justify-content: center;
     align-content: center;
 }
+/* Box with text - content */
 .contentBox{
     height: 100px;
-    width: 250px;
+    width: 50%;
+    /* min-width: 250px; */
     flex: 1 0 50%;
     display: flex;
     flex-direction: column;
@@ -100,6 +108,7 @@ body{
     opacity: 70%;
     margin: 10px 0;
 }
+/* End of the box, buttons below it */
 #contentBtns{
     display: flex;
     flex-direction: row;
@@ -108,18 +117,23 @@ body{
     height: 10%;
     width: 80%;
 }
-.contentBtn{
-    height: 35px;
+#contentBtns input[type="button"]{
+    height: 45px;
     width: 150px;
-    margin-right: 15px;
-    background-color: #b5b5b5;
-    opacity: 100%;
-    border: none;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1rem;
+    margin: 15px 15px 15px 0;
+    font-size: 1.2rem;
+    background: none;
+    color: rgba(51, 51, 51, 0.7);
+    padding: 10px 20px;
+    border: 2px solid rgba(51, 51, 51, 0.7);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+#contentBtns input[type="button"]:hover{
+    background: rgba(51, 51, 51, 0.7);
+    color: #fff;
 }
 /* Contact Us CSS */
 #contactUsDiv{
@@ -128,7 +142,6 @@ body{
     flex-wrap: wrap;
     align-content: center;
     font-size: 1.2rem;
-    height: 80%;
     width: 80%;
 }
 form{
@@ -145,36 +158,41 @@ form{
     flex-flow: column;
 }
 label{
+    padding-bottom: 5px;
     font-size: 1.5rem;
+    opacity: 70%;
 }
 .contactUs-element{
     width: 100%;
     display: flex;
     flex-flow: column;
-    margin-top: 15px;
+    margin-top: 35px;
 }
 form input[type="text"], textarea{
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
     opacity: 70%;
     resize: none;
 }
 form input[type="submit"]{
+    height: 45px;
+    width: 150px;
+    font-size: 1.2rem;
     margin: 15px 15px 15px 0;
     background: none;
     color: rgba(51, 51, 51, 0.7);
     padding: 10px 20px;
-    border: 2px solid rgba(51, 51, 51, 0.7);;
+    border: 2px solid rgba(51, 51, 51, 0.7);
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 input[type="submit"]:hover{
-    background: rgba(51, 51, 51, 0.7);;
+    background: rgba(51, 51, 51, 0.7);
     color: #fff;
 }
 /* Change password */
@@ -200,17 +218,20 @@ input[type="submit"]:hover{
     margin-top: 15px;
 }
 #changePassword input[type="submit"]{
+    font-size: 1.2rem;
+    height: 45px;
+    width: 150px;
     margin: 15px 15px 15px 0;
     background: none;
     color: rgba(51, 51, 51, 0.7);
     padding: 10px 20px;
-    border: 2px solid rgba(51, 51, 51, 0.7);;
+    border: 2px solid rgba(51, 51, 51, 0.7);
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 #changePassword input[type="submit"]:hover{
-    background: rgba(51, 51, 51, 0.7);;
+    background: rgba(51, 51, 51, 0.7);
     color: #fff;
 }
