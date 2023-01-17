@@ -18,21 +18,21 @@
 /******************************************
 /* HEADER
 /*******************************************/
-header {
-    height: 12vh;
-    max-height: 50px;
+header{
+    height: 10vh;
     min-height: 50px;
     width: 100%;
     min-width: 500px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
 }
 #mainHeader{
     height: 80%;
     width: 80%;
-    max-width: 1000px;
+    max-width: 2200px;
     min-width: 500px;
     display: flex;
     justify-content: space-between;
@@ -43,7 +43,7 @@ header {
     max-width: 1000px;
     min-width: 500px;
     border-bottom: 2px solid #b5b5b5;
-    margin-bottom: 2px;
+    margin-bottom: 5%;
 }
 /* LEFT BAR */
 #headerBarLeft {
@@ -55,21 +55,15 @@ header {
     align-items: center;
 }
 #logoImg {
-    height: 30px;
+    background-image: url("./cssImages/LOGO.png");
     margin-left: 8%;
-    aspect-ratio: 1 / 1;
-    opacity: 70%;
 }
-/* #storeTitle {
-
-} */
 #storeTitleText {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-family: 'Roboto Condensed', sans-serif;
     opacity: 70%;
     color: #b5b5b5;
 }
-
 /* RIGHT BAR */
 #headerBarRight {
     height: 100%;
@@ -80,19 +74,38 @@ header {
     align-items: center;
 }
 #cart{
-    height: 30px;
-    aspect-ratio: 1 / 1;
+    background-image: url("./cssImages/cart.png");
     margin-right: 8%;
-    opacity: 70%;
 }
 #account{
-    height: 30px;
-    aspect-ratio: 1 / 1;
-    opacity: 70%;
+    background-image: url("./cssImages/account.png");
 }
 #headerDivider{
-    height: 30px;
+    height: 80%;
     border-left: 2px solid #b5b5b5;
     margin: 0 20px;
     opacity: 70%;
+}
+/* HEADER LOGOS SIZING */
+.headerImg{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1 / 1;
+    /* opacity: 70%; */
+    height: 80%;
+    min-height: 30px;
+    max-height: 150px;
+}
+.headerImg:hover{
+    cursor: pointer;
+}
+/* MEDIA QUERY FOR LARGE SCREEN */
+@media screen and (min-width: 2200px){
+    #storeTitleText{
+        font-size: 5rem;
+    }
+    #headerDivider{
+        margin: 0 60px;
+    }
 }
