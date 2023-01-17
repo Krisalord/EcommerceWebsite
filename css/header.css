@@ -59,7 +59,8 @@ header{
     margin-left: 8%;
 }
 #storeTitleText {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
+    font-size: 4vh;
     font-family: 'Roboto Condensed', sans-serif;
     opacity: 70%;
     color: #b5b5b5;
@@ -103,7 +104,7 @@ header{
 /* MEDIA QUERY FOR LARGE SCREEN */
 @media screen and (min-width: 2200px){
     #storeTitleText{
-        font-size: 5rem;
+        font-size: 5%;
     }
     #headerDivider{
         margin: 0 60px;
