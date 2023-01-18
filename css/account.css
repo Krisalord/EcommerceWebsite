@@ -38,20 +38,14 @@ body{
 #options{
     width: 30%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-top: 30vh;
     height: 20vh;
 }
-#options ol{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-#options ol li{
+#options span{
     margin: 15px 0;
     font-size: 2rem;
-}
-#options ol li span{
     display: block;
     opacity: 70%;
 }
@@ -240,7 +234,64 @@ input[type="submit"]:hover{
     color: #fff;
 }
 @media (max-width: 600px){
-    body{
-        background-color: red;
+    #mainContent{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        width: 80vw;
+        margin: auto;
+        min-height: 75vh;
+        width: 70vw;
+        min-height: calc(100vh - 50px);
+    }
+    /* OPTIONS HORISONTALLY */
+    #options{
+        width: 100%;
+        height: 10vh;
+        flex-direction: row;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    #options span{
+        width: 30%;
+        opacity: 70%;
+        font-size: 1.2rem;
+        text-align: center;
+        margin: auto;
+    }
+    /* DIVIDER FOR ACCOUNT PAGE */
+    #dividerForAccount{
+        min-width: 100vw;
+        min-height: 1px;
+        max-height: 1px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+    }
+    /* DIV WITH CONTENT */
+    #content{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5vh;
+    }
+    /* Contact Us CSS */
+    #contactUsDiv{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-content: center;
+        font-size: 1.2rem;
+        width: 100%;
+    }
+    /* MyInfo CSS */
+    /* Main container */
+    #contentDivs{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        font-size: 1.2rem;
+        width: 100%;
     }
 }
