@@ -15,20 +15,29 @@
 .clear {
    clear: both;
 }
+body{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 800px;
+    font-size: 62.5%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
 /* CHECKOUT MAIN */
 #checkOutMain{
     min-height: calc(100vh - 50px);
     width: 100%;
-    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 62.5%;
 }
 /* Centered div */
 #checkOutContent{
     height: 80vh;
-    width: 60vw;
+    width: 70vw;
+    min-width: 600px;
+    max-width: 900px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -132,4 +141,8 @@
     aspect-ratio: 1 / 1;
     cursor: pointer;
     margin: 40px;
+}
+/* MEDIA QUERY FOR PHONE SCREEN */
+@media (max-width: 768px){
+    /* styles for phones */
 }
