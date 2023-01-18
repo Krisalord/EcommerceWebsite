@@ -101,7 +101,3 @@ header{
 .headerImg:hover{
     cursor: pointer;
 }
-/* MEDIA QUERY FOR LARGE SCREEN */
-@media screen and (min-width: 2560px){
-    
-}
