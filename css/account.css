@@ -28,11 +28,10 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 80vw;
     margin: auto;
     min-height: 75vh;
     width: 70vw;
-    min-height: calc(100vh - 50px);
+    min-height: 80vh;
 }
 /* DIV WITH OPTIONS */
 #options{
@@ -40,8 +39,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 30vh;
-    height: 20vh;
+    align-items: center;
+    min-height: 100%;
 }
 #options span{
     margin: 15px 0;
@@ -51,16 +50,17 @@ body{
 }
 /* DIVIDER FOR ACCOUNT PAGE */
 #dividerForAccount{
-    min-height: 100vh;
+    min-height: 100%;
     border-left: 2px solid rgba(0, 0, 0, 0.7);
+    margin-right: 40px;
 }
 /* DIV WITH CONTENT */
 #content{
     width: 70%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 25vh;
+    justify-content: center;
+    min-height: 100%;
 }
 /* MyInfo CSS */
 /* Main container */
@@ -199,6 +199,7 @@ input[type="submit"]:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 50%;
     gap: 5px;
 }
 #changePassword input[type="password"]{

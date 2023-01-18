@@ -25,18 +25,16 @@ body{
 }
 /* CHECKOUT MAIN */
 #checkOutMain{
-    min-height: calc(100vh - 50px);
+    min-height: 90vh;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 /* Centered div */
 #checkOutContent{
-    height: 80vh;
-    width: 70vw;
+    width: 70%;
     min-width: 600px;
-    max-width: 900px;
+    max-width: 1000px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -45,15 +43,13 @@ body{
 /* SUMMARY OF THE ORDER (PRICE, BTNS TO ORDER) */
 #checkOutSummary{
     height: 400px;
-    min-width: 250px;
-    width: 30%;
+    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
     padding: 10px;
-    /* border: 2px solid rgba(128, 128, 128, 0.7); */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #checkOutSummary span{
@@ -99,7 +95,7 @@ body{
 }
 /* ITEMS IN CART */
 #checkOutItems{
-    width: 70%;
+    width: 400px;
     min-height: 100%;
     /* display: flex;
     flex-direction: column; */
@@ -140,8 +136,4 @@ body{
     aspect-ratio: 1 / 1;
     cursor: pointer;
     margin: 40px;
-}
-/* MEDIA QUERY FOR PHONE SCREEN */
-@media (max-width: 768px){
-    /* styles for phones */
 }

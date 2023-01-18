@@ -19,7 +19,9 @@ body{
      background-color: white;
      display: flex;
      flex-direction: column;
+     justify-content: center;
      align-items: center;
+     min-width: 700px;
 }
 /* BOX OF THE MAIN PRODUCT */
 #mainSpace {
