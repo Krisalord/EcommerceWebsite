@@ -22,6 +22,7 @@ body{
     align-items: center;
     font-size: 62.5%;
     font-family: 'Roboto Condensed', sans-serif;
+    min-width: 900px;
 }
 /* CHECKOUT MAIN */
 #checkOutMain{
