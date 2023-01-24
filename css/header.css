@@ -19,8 +19,7 @@
 /* HEADER
 /*******************************************/
 header{
-    height: 10vh;
-    min-height: 50px;
+    height: 75px;
     width: 100%;
     min-width: 800px;
     display: flex;
@@ -59,8 +58,7 @@ header{
     margin-left: 8%;
 }
 #storeTitleText {
-    /* font-size: 1.2rem; */
-    font-size: 3vh;
+    font-size: 1.2rem;
     font-family: 'Roboto Condensed', sans-serif;
     opacity: 70%;
     color: #b5b5b5;

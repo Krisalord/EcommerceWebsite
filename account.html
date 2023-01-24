@@ -38,16 +38,68 @@
 				</div>
 			</div>
 		</header>
-		<!-- MAIN SECTION OF THE ACCOUNT PAGE -->
-		<section id="mainContent">
+			<!-- MAIN SECTION OF THE ACCOUNT PAGE -->
+		<section id="mainSpace">
 			<div id="options">
-				<span id="myInfo">My Info</span>
-				<span id="openPasswordChange">Change Password</span>
+				<span id="myInfoWindow">My Info</span>
+				<span id="passwordChangeWindow">Change Password</span>
 				<span id="contactUs">Contacts Us</span>
+				<span id="logOut">Log Out</span>
 			</div>
-			<div id="dividerForAccount"></div>
-			<div id="content">
-			</div>
+				<div id="content">
+					<div id="contactUsDiv">
+						<form>
+							<div class="nameMail">
+								<label for="name">Name:</label>
+								<input type="text" id="name" name="name" required>
+							</div>
+							<div class="nameMail">
+								<label for="mail">Mail:</label>
+								<input type="text" id="mail" name="mail" required>
+							</div>
+							<div class="contactUs-element">
+								<label for="message">Message:</label>
+								<textarea id="message" name="message" maxlength="144" required></textarea>
+							</div>
+							<input type="submit" value="Submit">
+						</form>
+					</div>
+
+					<!-- HTML OF CHANGE PASSWORD WINDOW
+					<div id="changePasswordCenter">
+						<span class="changePasswordSingleItem">Old password</span>
+						<input type="password" class="changePasswordSingleItem">
+						<span class="changePasswordSingleItem">New password</span>
+						<input type="password" class="changePasswordSingleItem">
+						<span class="changePasswordSingleItem">Confirm password</span>
+						<input type="password" class="changePasswordSingleItem">
+						<input type="submit" value="Change">
+					</div> -->
+
+					<!-- HTML OF THE MYINFO WINDOW
+					<div id="myInfoCenter">
+						<div class="myInfoSingleBox">
+							<span>Name</span>
+							<div class="myInfoDivider"></div>
+							<span>Artur Motin</span>
+						</div>
+						<div class="myInfoSingleBox">
+							<span>Email</span>
+							<div class="myInfoDivider"></div>
+							<span>artur.motin98@gmail.com</span>
+						</div>
+						<div class="myInfoSingleBox">
+							<span>Date Of Birth</span>
+							<div class="myInfoDivider"></div>
+							<span>24.10.1998</span>
+						</div>
+						<div class="myInfoSingleBox">
+							<span>Phone</span>
+							<div class="myInfoDivider"></div>
+							<span>+358449897277</span>
+						</div>
+					</div>
+				</div> -->
 		</section>
 		<footer>
 		</footer>

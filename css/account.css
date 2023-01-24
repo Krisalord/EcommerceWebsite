@@ -17,109 +17,120 @@
 }
 body{
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 62.5%;
     font-family: 'Roboto Condensed', sans-serif;
-}
-/* MAIN CONTENT */
-#mainContent{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: auto;
-    min-height: 75vh;
-    width: 70vw;
-    min-height: 80vh;
-}
-/* DIV WITH OPTIONS */
-#options{
-    width: 30%;
+    overflow: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-height: 100%;
+    min-height: calc(600px + 150px + 75px);
+    min-width: 600px;
+}
+#mainSpace {
+    height: calc(100vh - 150px - 75px);
+    min-height: 600px;
+    width: 70vw;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 62.5%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* Option bar on top of the screen */
+#options{
+    height: 10%;
+    min-height: 75px;
+    max-height: 100px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 #options span{
-    margin: 15px 0;
-    font-size: 2rem;
-    display: block;
-    opacity: 70%;
-}
-/* DIVIDER FOR ACCOUNT PAGE */
-#dividerForAccount{
-    min-height: 100%;
-    border-left: 2px solid rgba(0, 0, 0, 0.7);
-    margin-right: 40px;
-}
-/* DIV WITH CONTENT */
-#content{
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100%;
-}
-/* MyInfo CSS */
-/* Main container */
-#contentDivs{
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-content: flex-end;
-    font-size: 1.2rem;
-    width: 80%;
-}
-#contentDivsSizing{
+    width: calc(100% / 4.5);
     height: 100%;
-    max-width: 90%;
+    font-size: 1.5rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+#options span:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* Content of the chosen category */
+#content{
+    height: 90%;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+}
+/* MY INFO WINDOW OPENED */
+#myInfoCenter{
+    height: 70%;
+    max-height: 500px;
+    width: 70%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
 }
-/* Box with text - content */
-.contentBox{
-    height: 100px;
+/* Single box of content in MyInfo */
+.myInfoSingleBox{
+    height: 50%;
     width: 50%;
-    /* min-width: 250px; */
-    flex: 1 0 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: flex-start;
 }
-.contentBox span{
-    font-size: 1.5rem;
-    opacity: 70%;
-    font-family: 'Roboto Condensed', sans-serif;
+.myInfoSingleBox span{
+    font-size: 1.2rem;
 }
-.contentBox>:first-child{
-    opacity: 100%;
+.myInfoSingleBox > *:last-child {
+    color: rgba(0, 0, 0, 0.7)
 }
-.dividerMyData{
-    width: 60%;
-    border-bottom: 1px solid black;
-    opacity: 70%;
-    margin: 10px 0;
-}
-/* End of the box, buttons below it */
-#contentBtns{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    height: 10%;
+.myInfoSingleBox div{
     width: 80%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+    margin: 5% 0;
 }
-#contentBtns input[type="button"]{
+/* Password change window */
+#changePasswordCenter{
+    height: 70%;
+    max-height: 450px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+#changePasswordCenter span{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    opacity: 70%;
+}
+.changePasswordSingleItem{
+    height: calc(100% / 6);
+    width: 50%;
+}
+#changePasswordCenter input[type="password"]{
+    width: 50%;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    opacity: 70%;
+    resize: none;
+}
+#changePasswordCenter input[type="submit"]{
+    font-size: 1.2rem;
     height: 45px;
     width: 150px;
     margin: 15px 15px 15px 0;
-    font-size: 1.2rem;
     background: none;
     color: rgba(51, 51, 51, 0.7);
     padding: 10px 20px;
@@ -129,10 +140,26 @@ body{
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
-#contentBtns input[type="button"]:hover{
+#changePasswordCenter input[type="submit"]:hover{
     background: rgba(51, 51, 51, 0.7);
     color: #fff;
 }
+/* Contact Us window */
+#contactUsCenter{
+    height: 70%;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    background-color: aliceblue;
+}
+
+
+
+
 /* Contact Us CSS */
 #contactUsDiv{
     display: flex;
@@ -192,112 +219,4 @@ form input[type="submit"]{
 input[type="submit"]:hover{
     background: rgba(51, 51, 51, 0.7);
     color: #fff;
-}
-/* Change password */
-#changePassword{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    gap: 5px;
-}
-#changePassword input[type="password"]{
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 1.5rem;
-    border: none;
-    border-bottom: 2px solid #ccc;
-    opacity: 70%;
-    resize: none;
-}
-#changePassword span{
-    font-size: 1.5rem;
-    opacity: 70%;
-    margin-top: 15px;
-}
-#changePassword input[type="submit"]{
-    font-size: 1.2rem;
-    height: 45px;
-    width: 150px;
-    margin: 15px 15px 15px 0;
-    background: none;
-    color: rgba(51, 51, 51, 0.7);
-    padding: 10px 20px;
-    border: 2px solid rgba(51, 51, 51, 0.7);
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-#changePassword input[type="submit"]:hover{
-    background: rgba(51, 51, 51, 0.7);
-    color: #fff;
-}
-@media screen and (max-width: 600px){
-    #mainContent{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        width: 80vw;
-        margin: auto;
-        min-height: 75vh;
-        width: 70vw;
-        min-height: calc(100vh - 50px);
-    }
-    /* OPTIONS HORISONTALLY */
-    #options{
-        width: 100%;
-        height: 10vh;
-        flex-direction: row;
-        gap: 15px;
-        margin-top: 10px;
-    }
-    #options span{
-        width: 30%;
-        opacity: 70%;
-        font-size: 1.2rem;
-        text-align: center;
-        margin: auto;
-    }
-    /* DIVIDER FOR ACCOUNT PAGE */
-    #dividerForAccount{
-        min-width: 100vw;
-        min-height: 1px;
-        max-height: 1px;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.7);
-    }
-    /* DIV WITH CONTENT */
-    #content{
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 5vh;
-    }
-    /* Contact Us CSS */
-    #contactUsDiv{
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        align-content: center;
-        font-size: 1.2rem;
-        width: 100%;
-    }
-    /* MyInfo CSS */
-    /* Main container */
-    #contentDivs{
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        align-content: flex-end;
-        font-size: 1.2rem;
-        width: 100%;
-    }
-}
-@media screen and (min-width: 1600px){
-    #contactUsDiv{
-        font-size: 5.2rem;
-    }
 }

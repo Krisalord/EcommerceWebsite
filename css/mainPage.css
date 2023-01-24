@@ -21,7 +21,9 @@ body{
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     min-width: 700px;
+     height: 100%;
+     min-width: 900px;
+     font-family: 'Roboto Condensed', sans-serif;
 }
 /* BOX OF THE MAIN PRODUCT */
 #mainSpace {
@@ -37,7 +39,6 @@ body{
      align-content: flex-start;
      justify-content: center;
      font-size: 62.5%;
-     font-family: 'Roboto Condensed', sans-serif;
      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 /* BOX FOR SPECS */
@@ -49,7 +50,6 @@ body{
      background-color: rgba(0, 0, 0, 0.8);
      display: flex;
      justify-content: center;
-     font-family: 'Roboto Condensed', sans-serif;
 }
 /* OTHER PRODUCTS BOX */
 #moreProducts{
@@ -58,7 +58,6 @@ body{
      max-width: 900px;
      height: 1100px;
      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-     font-family: 'Roboto Condensed', sans-serif;
 }
 /* MAIN SPACE BANNER */
 /* SPACE FOR TEXT OF THE BANNER */
@@ -317,7 +316,6 @@ body{
           align-content: flex-start;
           justify-content: center;
           font-size: 62.5%;
-          font-family: 'Roboto Condensed', sans-serif;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
      }
      /* BOX FOR SPECS */
@@ -329,7 +327,6 @@ body{
           background-color: rgba(0, 0, 0, 0.8);
           display: flex;
           justify-content: center;
-          font-family: 'Roboto Condensed', sans-serif;
      }
      /* OTHER PRODUCTS BOX */
      #moreProducts{
@@ -338,6 +335,5 @@ body{
           max-width: 900px;
           height: 1100px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          font-family: 'Roboto Condensed', sans-serif;
      }
 }
