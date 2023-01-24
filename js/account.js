@@ -40,8 +40,7 @@ let arr = [["1", "Artur", "Motin", "24.10.1998", "artur.motin98@gmail.com", "123
 // }
 
 document.querySelector('#myInfoWindow').addEventListener('click', openMyInfo)
-function openMyInfo()
-{
+function openMyInfo(){
     const contentDiv = document.querySelector("#content");
     contentDiv.innerHTML = "";
 
@@ -75,10 +74,79 @@ function openMyInfo()
     }
 }
 
-// document.querySelector('#contactUsWindow').addEventListener('click', openContactUs)
+document.querySelector('#contactUsWindow').addEventListener('click', openContactUs)
 
 function openContactUs(){
+    const contentDiv = document.querySelector("#content")
+    contentDiv.innerHTML = ''
 
+    const contactUsDiv = document.createElement("div")
+    contactUsDiv.id = "contactUsDiv"
+
+    const emailForm = document.createElement("form")
+
+    //Name field
+    const nameMailDiv = document.createElement("div")
+    nameMailDiv.classList.add("nameMail")
+
+    const nameLabel = document.createElement("label")
+    nameLabel.setAttribute("for", "name")
+    nameLabel.innerText = "Name:"
+
+    const nameInput = document.createElement("input")
+    nameInput.setAttribute("type", "text")
+    nameInput.setAttribute("id", "name")
+    nameInput.setAttribute("name", "name")
+    nameInput.setAttribute("required", "")
+
+    nameMailDiv.appendChild(nameLabel)
+    nameMailDiv.appendChild(nameInput)
+    emailForm.appendChild(nameMailDiv)
+
+    //Mail field
+    const nameMailDiv2 = document.createElement("div")
+    nameMailDiv2.classList.add("nameMail")
+
+    const mailLabel = document.createElement("label")
+    mailLabel.setAttribute("for", "mail")
+    mailLabel.innerText = "Mail:"
+
+    const mailInput = document.createElement("input")
+    mailInput.setAttribute("type", "text")
+    mailInput.setAttribute("id", "mail")
+    mailInput.setAttribute("name", "mail")
+    mailInput.setAttribute("required", "")
+
+    nameMailDiv2.appendChild(mailLabel)
+    nameMailDiv2.appendChild(mailInput)
+    emailForm.appendChild(nameMailDiv2)
+
+    //Message field
+    const contactUsElement = document.createElement("div")
+    contactUsElement.classList.add("contactUs-element")
+
+    const messageLabel = document.createElement("label")
+    messageLabel.setAttribute("for", "message")
+    messageLabel.innerText = "Message:"
+
+    const messageInput = document.createElement("textarea")
+    messageInput.setAttribute("id", "message")
+    messageInput.setAttribute("name", "message")
+    messageInput.setAttribute("maxlength", "144")
+    messageInput.setAttribute("required", "")
+
+    contactUsElement.appendChild(messageLabel)
+    contactUsElement.appendChild(messageInput)
+    emailForm.appendChild(contactUsElement)
+
+    //Submit button
+    const contactUsBtn = document.createElement("input")
+    contactUsBtn.setAttribute("type", "submit")
+    contactUsBtn.setAttribute("value", "Submit")
+    emailForm.appendChild(contactUsBtn)
+
+    contactUsDiv.appendChild(emailForm)
+    contentDiv.appendChild(contactUsDiv)
 }
 
 document.querySelector('#passwordChangeWindow').addEventListener('click', openPasswordChange)
@@ -126,4 +194,10 @@ function openPasswordChange(){
     changePassword.appendChild(changeButton)
 
     document.querySelector('#content').appendChild(changePassword)
+}
+
+document.querySelector('#logOut').addEventListener('click', logOut)
+
+function logOut(){
+    window.open('home.html', '_self')
 }
