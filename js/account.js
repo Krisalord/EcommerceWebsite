@@ -1,4 +1,4 @@
-let loginStatus = 2
+let loginStatus = 1
 const options = document.querySelector('#options')
 if(loginStatus == 1){
     // Select div with "options" for user in my account menu
@@ -242,7 +242,7 @@ else if(loginStatus == 2){
                 var accounts = JSON.parse(xhr.responseText).accounts;
                 
                 // Check the entered login information against the accounts
-                for (var i = 0; i < accounts.length; i++){
+                for (var i = 0; i < accounts.lenght; i++){
                     if (email === accounts[i].email && password === accounts[i].password) {
                     loginStatus = 2
                     console.log(loginStatus)
