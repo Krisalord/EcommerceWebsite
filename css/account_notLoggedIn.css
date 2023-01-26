@@ -1,0 +1,98 @@
+/* Create account form */
+.createAccountForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+}
+.createAccountForm input[type="text"], input[type="tel"]{
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    opacity: 70%;
+    resize: none;
+    font-size: 1.2rem;
+}
+.createAccountForm input[type="submit"]{
+    height: 45px;
+    width: 150px;
+    font-size: 1.2rem;
+    background: none;
+    color: rgba(51, 51, 51, 0.7);
+    padding: 10px 20px;
+    border: 2px solid rgba(51, 51, 51, 0.7);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.createAccountForm input[type="submit"]:hover{
+    background: rgba(51, 51, 51, 0.7);
+    color: #fff;
+}
+.createAccountForm input[type="password"]{
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    opacity: 70%;
+    resize: none;
+    font-size: 1.2rem;
+}
+/* one section of the account creation */
+.sectionOfReg{
+    width: 50%;
+    height: auto;
+    padding: 5% 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* Log In window */
+#logInDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 50%;
+}
+#logInDiv input[type="text"]{
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    opacity: 70%;
+    resize: none;
+    font-size: 1.2rem;
+}
+#logInDiv input[type="submit"]{
+    height: 45px;
+    width: 150px;
+    font-size: 1.2rem;
+    background: none;
+    color: rgba(51, 51, 51, 0.7);
+    padding: 10px 20px;
+    border: 2px solid rgba(51, 51, 51, 0.7);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+#logInDiv input[type="submit"]:hover{
+    background: rgba(51, 51, 51, 0.7);
+    color: #fff;
+}
+#logInDiv input[type="password"]{
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    opacity: 70%;
+    resize: none;
+    font-size: 1.2rem;
+}
