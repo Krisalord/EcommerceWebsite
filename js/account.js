@@ -243,52 +243,31 @@ window.onload = function checkLoginStatus() {
             logInButton.setAttribute('type', 'submit')
             logInButton.setAttribute('value', 'Log In')
             logInDiv.appendChild(logInButton)
-            // add a logIn check
-            // logInButton.addEventListener('click', function(){
-            //     var users = [
-            //         {
-            //             email: "artur.motin98@gmail.com",
-            //             password: "1234"
-            //         },
-            //         {
-            //             email: "artur.motin21@gmail.com",
-            //             password: "1234"
-            //         }
-            //     ]
-            //     let emailCheck = document.querySelector('#logInEmailCheck').value
-            //     let passwordCheck = document.querySelector('#passwordCheck').value
+            //add a logIn check
+            logInButton.addEventListener('click', function(){
+                var users = [
+                    {
+                        email: "artur.motin98@gmail.com",
+                        password: "1234"
+                    },
+                    {
+                        email: "artur.motin21@gmail.com",
+                        password: "1234"
+                    }
+                ]
+                let emailCheck = document.querySelector('#logInEmailCheck').value
+                let passwordCheck = document.querySelector('#passwordCheck').value
     
-            //     for(i = 0; i < users.length; i++)
-            //     {
-            //         if(emailCheck == users[i].email && passwordCheck == users[i].password){
-            //             loginStatus = 1
-            //             document.querySelector("#content").innerHTML = ""
-            //             document.querySelector("#options").innerHTML = ""
-            //             checkLoginStatus()
-            //         }
-            //     }
-            //     // Read the JSON file
-            //     // var xhr = new XMLHttpRequest();
-            //     // xhr.open("GET", "accounts.json", true);
-            //     // xhr.onreadystatechange = function(){
-            //     //     if (xhr.readyState === 4 && xhr.status === 200){
-            //     //     var accounts = JSON.parse(xhr.responseText).accounts;
-                    
-            //     //     // Check the entered login information against the accounts
-            //     //     for (var i = 0; i < accounts.lenght; i++){
-            //     //         if (email === accounts[i].email && password === accounts[i].password) {
-            //     //         loginStatus = 2
-            //     //         console.log(loginStatus)
-            //     //         return;
-            //     //         }
-            //     //     }
-                    
-            //     //     // If the loop completes and no match is found
-            //     //     alert("Incorrect username or password. Please try again.");
-            //     //     }
-            //     // };
-            //     // xhr.send();
-            // })
+                for(i = 0; i < users.length; i++)
+                {
+                    if(emailCheck == users[i].email && passwordCheck == users[i].password){
+                        loginStatus = 1
+                        document.querySelector("#content").innerHTML = ""
+                        document.querySelector("#options").innerHTML = ""
+                        checkLoginStatus()
+                    }
+                }
+            })
             document.querySelector('#content').appendChild(logInDiv)
         })
     }
