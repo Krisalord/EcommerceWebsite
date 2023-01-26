@@ -272,17 +272,3 @@ window.onload = function checkLoginStatus() {
         })
     }
 }
-
-// {
-//     "users":[
-//         {
-//             "id": 1,
-//             "name": "Artur Motin",
-//             "email": "artur.motin98@gmail.com",
-//             "phoneNumber": "+358449897277",
-//             "password": "1234",
-//             "dateOfBirth": "23.10.1998",
-//             "address": "Myllärintie 32"
-//         }
-//     ]
-// }
