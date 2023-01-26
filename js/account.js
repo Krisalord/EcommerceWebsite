@@ -230,11 +230,43 @@ window.onload = function checkLoginStatus() {
                     "address": sendAddress,
                     "password": sendPassword
                     }
-                    const fs = require('fs')
-                    fs.writeFile('accounts.json', JSON.stringify(newUser), (err) => {
-                        if (err) console.log(err)
-                        console.log('Data written to file')
-                    })                    
+                    
+
+
+                    const MongoClient = require('mongodb').MongoClient;
+
+        // Connection URL
+        const url = 'mongodb+srv://admin:admin@cluster0.nptsrku.mongodb.net/test'
+
+        // Database Name
+        const dbName = '<database>';
+
+        // Use connect method to connect to the server
+        MongoClient.connect(url, { useNewUrlParser: true }, function(err, client) {
+        if(err) throw err;
+        console.log("Connected successfully to server");
+        
+        const db = client.db(dbName);
+
+        // Create an array of documents to insert
+        const documents = [
+            { name: 'John', age: 30 },
+            { name: 'Jane', age: 25 },
+            { name: 'Bob', age: 35 }
+        ];
+
+        // Insert the array of documents into the collection
+        db.collection('<collection>').insertMany(documents, function(err, result) {
+            if(err) throw err;
+            console.log(`Inserted ${result.insertedCount} documents into the collection`);
+            client.close();
+        });
+        });
+
+
+
+
+
             })
             document.querySelector('#content').appendChild(regForm)
         })
