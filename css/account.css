@@ -23,7 +23,7 @@ body{
     flex-direction: column;
     align-items: center;
     min-height: calc(600px + 150px + 75px);
-    min-width: 900px;
+    /* min-width: 900px; */
 }
 #mainSpace {
     height: calc(100vh - 75px);

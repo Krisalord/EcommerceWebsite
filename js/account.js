@@ -212,61 +212,8 @@ window.onload = function checkLoginStatus() {
             regBtn.setAttribute('type', 'submit')
             regForm.appendChild(regBtn)
             regBtn.addEventListener('click', function(){
-                // Get the new user's information from the input fields
-                var sendId = 3
-                var sendName = document.getElementById("sendName").value
-                var sendEmail = document.getElementById("sendEmail").value
-                var sendPhoneNumber = document.getElementById("sendPhoneNumber").value
-                var sendDateOfBirth = document.getElementById("sendDateOfBirth").value
-                var sendAddress = document.getElementById("sendAddress").value
-                var sendPassword = document.getElementById("sendPassword").value
-                // Create a new user object
-                var newUser = {
-                    "id": sendId,
-                    "name": sendName,
-                    "email": sendEmail,
-                    "phoneNumber": sendPhoneNumber,
-                    "dateOfBirth": sendDateOfBirth,
-                    "address": sendAddress,
-                    "password": sendPassword
-                    }
-                    
-
-
-                    const MongoClient = require('mongodb').MongoClient;
-
-        // Connection URL
-        const url = 'mongodb+srv://admin:admin@cluster0.nptsrku.mongodb.net/test'
-
-        // Database Name
-        const dbName = '<database>';
-
-        // Use connect method to connect to the server
-        MongoClient.connect(url, { useNewUrlParser: true }, function(err, client) {
-        if(err) throw err;
-        console.log("Connected successfully to server");
-        
-        const db = client.db(dbName);
-
-        // Create an array of documents to insert
-        const documents = [
-            { name: 'John', age: 30 },
-            { name: 'Jane', age: 25 },
-            { name: 'Bob', age: 35 }
-        ];
-
-        // Insert the array of documents into the collection
-        db.collection('<collection>').insertMany(documents, function(err, result) {
-            if(err) throw err;
-            console.log(`Inserted ${result.insertedCount} documents into the collection`);
-            client.close();
-        });
-        });
-
-
-
-
-
+                document.querySelector('#content').innerHTML = ''
+                alert("Account created!")
             })
             document.querySelector('#content').appendChild(regForm)
         })
