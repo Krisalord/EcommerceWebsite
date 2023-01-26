@@ -3,10 +3,6 @@ document.querySelector('#account').addEventListener('click', moveToAccount)
 let userLoggedIn = 0
 function moveToAccount()
 {
-    if(userLoggedIn == 0)
-    {
-
-    }
     window.open('account.html', '_self')
 }
 document.querySelector('#cart').addEventListener('click', moveToCheckOut)

@@ -1,52 +1,85 @@
-let arr = [["1", "Artur", "Motin", "24.10.1998", "artur.motin98@gmail.com", "1234"]/*, ["2", "Sanya", "Shelby", "14.4.2013", "sanya.kok@gmail.com", "1234"]*/]
+if(1 == 1){
+    // Select div with "options" for user in my account menu
+    const options = document.querySelector('#options')
+    options.innerHTML = ''
+    //MyInfoWondow, create element, add Event Listener
+    const myInfoWindow = document.createElement('span')
+    myInfoWindow.setAttribute('id', 'myInfoWondow')
+    myInfoWindow.innerText = 'My Info'
+    options.appendChild(myInfoWindow)
+    myInfoWindow.addEventListener('click', function(){
+            const contentDiv = document.querySelector("#content")
+            contentDiv.innerHTML = ""
 
-// Load users data
-// document.querySelector('#MyData').addEventListener('click', loadMyData)
-// function loadMyData()
-// {
-//     document.querySelector('#content').innerHTML = ''
+            const myInfoCenter = document.createElement("div")
+            myInfoCenter.id = "myInfoCenter"
+            contentDiv.appendChild(myInfoCenter)
 
-//     arr.forEach((attrs) => {
-//         let myDataDiv = document.createElement('div')
-//         myDataDiv.classList.add('myDataDiv')
+            const myInfo = [
+            { name: "Name", value: "Artur Motin" },
+            { name: "Email", value: "artur.motin98@gmail.com" },
+            { name: "Date Of Birth", value: "24.10.1998" },
+            { name: "Phone", value: "+358449897277" }
+            ];
 
-//         let firstName = document.createElement('span')
-//         firstName.classList.add('myDataFirstName')
-//         firstName.innerText = attrs[1]
-//         myDataDiv.appendChild(firstName)
+            for (let i = 0; i < myInfo.length; i++) {
+                const myInfoSingleBox = document.createElement("div")
+                myInfoSingleBox.classList.add("myInfoSingleBox")
+                myInfoCenter.appendChild(myInfoSingleBox)
 
-//         let familyName = document.createElement('span')
-//         familyName.classList.add('myDataFamilyName')
-//         familyName.innerHTML = attrs[2]
-//         myDataDiv.appendChild(familyName)
+                const myInfoSingleBoxName = document.createElement("span")
+                myInfoSingleBoxName.textContent = myInfo[i].name
+                myInfoSingleBox.appendChild(myInfoSingleBoxName)
 
-//         let dateOfBirth = document.createElement('span')
-//         dateOfBirth.classList.add('myDataDateOfBirth')
-//         dateOfBirth.innerHTML = attrs[3]
-//         myDataDiv.appendChild(dateOfBirth)
+                const myInfoDivider = document.createElement("div")
+                myInfoDivider.classList.add("myInfoDivider")
+                myInfoSingleBox.appendChild(myInfoDivider)
 
-//         let email = document.createElement('span')
-//         email.classList.add('myDataEmail')
-//         email.innerHTML = attrs[4]
-//         myDataDiv.appendChild(email)
+                const myInfoSingleBoxValue = document.createElement("span")
+                myInfoSingleBoxValue.textContent = myInfo[i].value
+                myInfoSingleBox.appendChild(myInfoSingleBoxValue)
+            }
+    })
+    //ChangePassword, create element, add Event Listener
+    const passwordChangeWindow = document.createElement('span')
+    passwordChangeWindow.setAttribute('id', 'passwordChangeWindow')
+    passwordChangeWindow.innerText = 'Change Password'
+    options.appendChild(passwordChangeWindow)
+    
 
-//         let password = document.createElement('span')
-//         password.classList.add('text')
-//         password.innerHTML = attrs[5]
-//         myDataDiv.appendChild(password)
 
-//         document.querySelector('#content').appendChild(myDataDiv)
-//     });
-// }
 
-document.querySelector('#myInfoWindow').addEventListener('click', openMyInfo)
+
+    
+    const contactUsWindow = document.createElement('span')
+    contactUsWindow.setAttribute('id', 'contactUsWindow')
+    contactUsWindow.innerText = 'Contact Us'
+    const logOut = document.createElement('span')
+    logOut.setAttribute('id', 'logOut')
+    logOut.innerText = 'Log Out'
+    //append all of the elements to the dom
+    
+    options.appendChild(passwordChangeWindow)
+    options.appendChild(contactUsWindow)
+    options.appendChild(logOut)
+
+    //event listeners for functions
+    document.querySelector('#myInfoWindow').addEventListener('click', openMyInfo)
+
+    document.querySelector('#contactUsWindow').addEventListener('click', openContactUs)
+
+    document.querySelector('#passwordChangeWindow').addEventListener('click', openPasswordChange)
+
+    document.querySelector('#logOut').addEventListener('click', logOutFromAccount)
+}
+//Open MyInfo window
 function openMyInfo(){
-    const contentDiv = document.querySelector("#content");
-    contentDiv.innerHTML = "";
+    const contentDiv = document.querySelector("#content")
+    contentDiv.innerHTML = ""
 
-    const myInfoCenter = document.createElement("div");
-    myInfoCenter.id = "myInfoCenter";
-    contentDiv.appendChild(myInfoCenter);
+    const myInfoCenter = document.createElement("div")
+    myInfoCenter.id = "myInfoCenter"
+    contentDiv.appendChild(myInfoCenter)
 
     const myInfo = [
     { name: "Name", value: "Artur Motin" },
@@ -56,26 +89,26 @@ function openMyInfo(){
     ];
 
     for (let i = 0; i < myInfo.length; i++) {
-        const myInfoSingleBox = document.createElement("div");
-        myInfoSingleBox.classList.add("myInfoSingleBox");
-        myInfoCenter.appendChild(myInfoSingleBox);
+        const myInfoSingleBox = document.createElement("div")
+        myInfoSingleBox.classList.add("myInfoSingleBox")
+        myInfoCenter.appendChild(myInfoSingleBox)
 
-        const myInfoSingleBoxName = document.createElement("span");
-        myInfoSingleBoxName.textContent = myInfo[i].name;
-        myInfoSingleBox.appendChild(myInfoSingleBoxName);
+        const myInfoSingleBoxName = document.createElement("span")
+        myInfoSingleBoxName.textContent = myInfo[i].name
+        myInfoSingleBox.appendChild(myInfoSingleBoxName)
 
-        const myInfoDivider = document.createElement("div");
-        myInfoDivider.classList.add("myInfoDivider");
-        myInfoSingleBox.appendChild(myInfoDivider);
+        const myInfoDivider = document.createElement("div")
+        myInfoDivider.classList.add("myInfoDivider")
+        myInfoSingleBox.appendChild(myInfoDivider)
 
-        const myInfoSingleBoxValue = document.createElement("span");
-        myInfoSingleBoxValue.textContent = myInfo[i].value;
-        myInfoSingleBox.appendChild(myInfoSingleBoxValue);
+        const myInfoSingleBoxValue = document.createElement("span")
+        myInfoSingleBoxValue.textContent = myInfo[i].value
+        myInfoSingleBox.appendChild(myInfoSingleBoxValue)
+
+        
     }
 }
-
-document.querySelector('#contactUsWindow').addEventListener('click', openContactUs)
-
+//Open ContactUs window
 function openContactUs(){
     const contentDiv = document.querySelector("#content")
     contentDiv.innerHTML = ''
@@ -148,9 +181,7 @@ function openContactUs(){
     contactUsDiv.appendChild(emailForm)
     contentDiv.appendChild(contactUsDiv)
 }
-
-document.querySelector('#passwordChangeWindow').addEventListener('click', openPasswordChange)
-
+//Open ChangePassword window
 function openPasswordChange(){
     document.querySelector('#content').innerHTML = ''
 
@@ -195,9 +226,7 @@ function openPasswordChange(){
 
     document.querySelector('#content').appendChild(changePassword)
 }
-
-document.querySelector('#logOut').addEventListener('click', logOut)
-
-function logOut(){
+//LogOut from the account
+function logOutFromAccount(){
     window.open('home.html', '_self')
 }
