@@ -247,7 +247,7 @@ window.onload = function checkLoginStatus() {
                     users.push(newUser)
                     
                     // Save the updated users array back to the JSON file
-                    xhr.open("PUT", "users.json", true);
+                    xhr.open("PUT", "accounts.json", true);
                     xhr.setRequestHeader("Content-Type", "application/json")
                     xhr.send(JSON.stringify({ "users": users }))
                     
