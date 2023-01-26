@@ -2,8 +2,9 @@
 .createAccountForm{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    height: auto;
+    height: 300px;
 }
 .createAccountForm input[type="text"], input[type="tel"]{
     padding: 10px;
@@ -55,9 +56,11 @@
 #logInDiv{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     gap: 30px;
     width: 50%;
+    height: auto;
 }
 #logInDiv input[type="text"]{
     padding: 10px;
