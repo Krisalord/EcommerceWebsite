@@ -35,7 +35,7 @@
 }
 .createAccountForm input[type="password"]{
     padding: 10px;
-    width: 60%;
+    width: 100%;
     box-sizing: border-box;
     border: none;
     border-bottom: 2px solid #ccc;
@@ -91,7 +91,7 @@
 }
 #logInDiv input[type="password"]{
     padding: 10px;
-    width: 100%;
+    width: 60%;
     box-sizing: border-box;
     border: none;
     border-bottom: 2px solid #ccc;
