@@ -201,7 +201,7 @@ window.onload = function checkLoginStatus() {
             div2.appendChild(in5)
             const in6 = document.createElement('input')
             in6.setAttribute('type', 'password')
-            in6.setAttribute('placeholder', 'Confirm password')
+            in6.setAttribute('placeholder', 'Password')
             in6.setAttribute('id', 'sendPassword')
             div2.appendChild(in6)
     
@@ -220,42 +220,21 @@ window.onload = function checkLoginStatus() {
                 var sendDateOfBirth = document.getElementById("sendDateOfBirth").value
                 var sendAddress = document.getElementById("sendAddress").value
                 var sendPassword = document.getElementById("sendPassword").value
-
-                //Hash the password
-                //var hashedpassword = hash(password)
-                
-                //Read the JSON file
-                var xhr = new XMLHttpRequest()
-                xhr.open("GET", "accounts.json", true)
-                xhr.onreadystatechange = function(){
-                    if (xhr.readyState === 4 && xhr.status === 200) {
-                    var users = JSON.parse(xhr.responseText).users
-                    
-                    // Create a new user object
-                    var newUser = {
-                        "id": sendId,
-                        "name": sendName,
-                        "email": sendEmail,
-                        "phoneNumber": sendPhoneNumber,
-                        "dateOfBirth": sendDateOfBirth,
-                        "address": sendAddress,
-                        "password": sendPassword
-                        // "password": hashedpassword
+                // Create a new user object
+                var newUser = {
+                    "id": sendId,
+                    "name": sendName,
+                    "email": sendEmail,
+                    "phoneNumber": sendPhoneNumber,
+                    "dateOfBirth": sendDateOfBirth,
+                    "address": sendAddress,
+                    "password": sendPassword
                     }
-                    
-                    // Add the new user to the users array
-                    users.push(newUser)
-                    
-                    // Save the updated users array back to the JSON file
-                    xhr.open("PUT", "accounts.json", true);
-                    xhr.setRequestHeader("Content-Type", "application/json")
-                    xhr.send(JSON.stringify({ "users": users }))
-                    
-                    // Alert the user that the new user was added
-                    alert("New user added successfully!")
-                    }
-                };
-                xhr.send();
+                    const fs = require('fs')
+                    fs.writeFile('accounts.json', JSON.stringify(newUser), (err) => {
+                        if (err) console.log(err)
+                        console.log('Data written to file')
+                    })                    
             })
             document.querySelector('#content').appendChild(regForm)
         })
@@ -335,3 +314,17 @@ window.onload = function checkLoginStatus() {
         })
     }
 }
+
+// {
+//     "users":[
+//         {
+//             "id": 1,
+//             "name": "Artur Motin",
+//             "email": "artur.motin98@gmail.com",
+//             "phoneNumber": "+358449897277",
+//             "password": "1234",
+//             "dateOfBirth": "23.10.1998",
+//             "address": "Myllärintie 32"
+//         }
+//     ]
+// }
