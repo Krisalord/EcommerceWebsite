@@ -54,13 +54,13 @@ body{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #checkOutSummary span{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 #checkOutSummary h2 + span{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 #checkOutSummary h2{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 /* Divs that have 2 spans (name and price) */
 .withPrice{
@@ -112,7 +112,7 @@ body{
 /* Picture of the item */
 .checkOutItem input[type="image"]:first-child{
     height: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: auto;
     padding: 40px;
 }
 /* Box with item description, name and price */
@@ -133,8 +133,8 @@ body{
     text-align: right;
 }
 .checkOutItem input[type="image"]:last-child{
-    height: 15px;
+    height: 35px;
     aspect-ratio: 1 / 1;
     cursor: pointer;
-    margin: 40px;
+    padding: 10px;
 }

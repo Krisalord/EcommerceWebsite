@@ -117,7 +117,7 @@ body{
      align-items: center;
 }
 #gpuBackground{
-     background-image: url("./cssImages/GPUbackground.png");
+     background-image: url("./cssImages/GPUbg1.png");
      background-size: contain;
      background-repeat: no-repeat;
      background-position: center;
@@ -161,10 +161,11 @@ body{
      color: white;
      opacity: 70%;
      text-align: center;
-     margin: 10% 0;
+     margin: 40px 0;
 }
 #specsCentered{
      height: 100%;
+     width: 60%;
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -172,11 +173,12 @@ body{
 }
 #lists{
      display: flex;
+     width: 70%;
      flex-direction: row;
      justify-content: space-around;
 }
 .specLists{
-     width: 35%;
+     width: 45%;
      height: 20%;
 }
 .specLists ol{
@@ -189,7 +191,7 @@ body{
 }
 #imageSpecs{
      height: 250px;
-     width: 250px;
+     width: 450px;
      margin-top: 5%;
      background-image: url("./cssImages/gpuSpecs.png");
      background-size: contain;
@@ -225,7 +227,7 @@ body{
 .imageInList1{
      height: 80%;
      aspect-ratio: 1 / 1;
-     background-image: url("./cssImages/gpuSpecs.png");
+     background-image: url("./cssImages/gpuSpecs1.png");
      background-size: contain;
      background-repeat: no-repeat;
      background-position: center;
@@ -241,7 +243,7 @@ body{
 .imageInList3{
      height: 80%;
      aspect-ratio: 1 / 1;
-     background-image: url("./cssImages/gpuSpecs2.png");
+     background-image: url("./cssImages/gpuSpecs3.png");
      background-size: contain;
      background-repeat: no-repeat;
      background-position: center;
@@ -249,7 +251,7 @@ body{
 .imageInList4{
      height: 80%;
      aspect-ratio: 1 / 1;
-     background-image: url("./cssImages/gpuSpecs2.png");
+     background-image: url("./cssImages/gpuSpecs4.png");
      background-size: contain;
      background-repeat: no-repeat;
      background-position: center;

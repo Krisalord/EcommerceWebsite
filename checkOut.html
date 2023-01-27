@@ -42,36 +42,17 @@
         <section id="checkOutMain">
             <div id="checkOutContent">
 				<div id="checkOutItems">
-					<div class="checkOutItem">
-						<input type="image" src="images/gpu.png">
-						<div class="checkOutItemText">
-							<h2>GPU NAME</h2>
-							<span>This is a sample product with a description.</span>
-							<span>30€</span>
-						</div>
-						<input type="image" class="checkOutItemX" src="images/X.png">
-					</div>
-
-					<div class="checkOutItem">
-						<input type="image" src="images/gpu.png">
-						<div class="checkOutItemText">
-							<h2>GPU NAME</h2>
-							<span>This is a sample product with a description.</span>
-							<span>30€</span>
-						</div>
-						<input type="image" class="checkOutItemX" src="images/X.png">
-					</div>
 				</div>
 				<div id="checkOutSummary">
 					<h2>SUMMARY</h2><br>
-					<div class="withPrice"><span>Subtotal price:</span><span>15€</span></div>
-					<div class="withPrice"><span>Delivery:</span><span>10€</span></div>
-					<div class="withPrice"><span>Tax:</span><span>5€</span></div>
-					<br><div class="withPrice"><h2>TOTAL:</h2><span>30€</span></div>
+					<div class="withPrice"><span>Subtotal price:</span><span id="summPrice" class="priceSpan"></span></div>
+					<div class="withPrice"><span>Delivery:</span><span id="deliveryPrice" class="priceSpan"></span></div>
+					<div class="withPrice"><span>Tax (25% ALV):</span><span id="taxPrice" class="priceSpan"></span></div>
+					<br><div class="withPrice"><h2>TOTAL:</h2><span id="finalPrice" class="priceSpan">1708€</span></div>
 					<div id="summaryButtons">
-						<input type="submit" value="Button">
-						<input type="submit" value="Button">
-						<input type="submit" value="Button">
+						<input type="submit" value="Continue as a guest">
+						<input type="submit" value="Continue as a member">
+						<input type="submit" value="Cancel order" id="cancelOrder">
 					</div>
 				</div>
 			</div>
